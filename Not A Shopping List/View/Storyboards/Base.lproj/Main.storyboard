@@ -68,7 +68,7 @@
                     <navigationItem key="navigationItem" title="Pick the desks you like" largeTitleDisplayMode="always" id="Wd3-9a-eT9">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="irs-ad-CgN">
                             <connections>
-                                <segue destination="G2B-ya-gcA" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="0XW-xq-c2N"/>
+                                <segue destination="G2B-ya-gcA" kind="show" identifier="EmailListSegue" id="w7C-e5-CSx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="KkK-K7-0W4">
-                                <rect key="frame" x="20" y="171" width="374" height="122"/>
+                                <rect key="frame" x="20" y="215" width="374" height="122"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JfR-8J-b36">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -111,7 +111,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email this list of desks to me!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzT-jq-0fT">
-                                <rect key="frame" x="20" y="44" width="374" height="67"/>
+                                <rect key="frame" x="20" y="88" width="374" height="67"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -129,6 +129,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1xp-G2-UFV"/>
                     </view>
+                    <navigationItem key="navigationItem" id="LgA-Tl-3Pc"/>
                     <connections>
                         <outlet property="emailLbl" destination="mBC-3r-8Di" id="7P5-9F-ang"/>
                         <outlet property="nameLbl" destination="JfR-8J-b36" id="sKl-0B-I4N"/>

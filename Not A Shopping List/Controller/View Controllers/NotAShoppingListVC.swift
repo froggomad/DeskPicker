@@ -24,6 +24,14 @@ class NotAShoppingListVC: UIViewController {
         collectionView.reloadData()
     }
     
+    //MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EmailListSegue" {
+            guard let destination = segue.destination as? ConfirmationVC else {return}
+            destination.furnitureDealer = deskDealer
+        }
+    }
+    
     //MARK: Helper Methods
     func youTouchedIt(cell: DeskCell) {
         guard let indexPath = collectionView.indexPath(for: cell) else {return}
@@ -48,7 +56,6 @@ class NotAShoppingListVC: UIViewController {
                 }
             }
         }
-        
     }
 
 }

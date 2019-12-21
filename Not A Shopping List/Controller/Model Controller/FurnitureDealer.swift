@@ -39,6 +39,11 @@ class FurnitureDealer {
         return fileUrl
     }
     
+    var pickedDesks: [Desk] {
+        return desks.filter {$0.wasTouched == true}
+    }
+    
+    
     //MARK: Read
     func loadFromPersistentStore() {
         guard let fileURL = fileLocation else {return}
@@ -50,7 +55,7 @@ class FurnitureDealer {
             self.desks = deskArray
         } catch {
             print("Error loading desks from plist: \(error)")
-        }        
+        }
     }
     
     //MARK: Update

@@ -24,6 +24,8 @@ class ConfirmationVC: UIViewController {
         }
     }
     
+    var desks: [Desk]?
+    
     //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,16 +36,34 @@ class ConfirmationVC: UIViewController {
     
     //MARK: Helper Methods
     func updateViews() {
-        
+        //TODO: Populate horizontal collectionview with picked desks
+        self.desks = furnitureDealer!.pickedDesks //force unwrapped because this is only called when furnitureDealer is set
     }
+    
+    func prettyPrinted() -> String {
+        guard let desks = desks else {return "No Desks Were Selected"}
+        var prettyString = ""
+        for (index, desk) in desks.enumerated() {
+            if desks.count > 1 {
+                if index != desks.count - 1 {
+                    prettyString.append("\(desk.name), ")
+                } else {
+                    prettyString.append("and \(desk.name)")
+                }
+            } else {
+                prettyString = desk.name
+            }
+        }
+        return prettyString
+    }
+    
     func emailList() {
         if let name = name, name != "",
            let email = email, email != "" {
-            #warning("Alert Here to replace print()")
-            print("Sending email list to \(name) at \(email)")
+            Alert.show(title: "Sending \(prettyPrinted())", message: "We're sending your list of desks to \(name) at \(email)!", vc: self)
+            navigationController?.popViewController(animated: true)
         } else {
-            #warning("Alert Here to replace print()")
-            print("Please enter your name and email address!")
+            Alert.show(title: "Oops!", message: "Please enter your name and email address!", vc: self)
         }
     }
 
