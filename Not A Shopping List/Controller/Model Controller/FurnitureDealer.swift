@@ -50,8 +50,7 @@ class FurnitureDealer {
             self.desks = deskArray
         } catch {
             print("Error loading desks from plist: \(error)")
-        }
-        
+        }        
     }
     
     //MARK: Update

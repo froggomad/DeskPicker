@@ -58,7 +58,6 @@ extension NotAShoppingListVC: UICollectionViewDelegate {
 }
 
 extension NotAShoppingListVC: UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         deskDealer.desks.count
     }
@@ -67,12 +66,9 @@ extension NotAShoppingListVC: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? DeskCell else {return UICollectionViewCell()}
         cell.desk = deskDealer.desks[indexPath.item]
         animateCell(cell: cell) //doesn't animate, but it does set the cell color
-        
-        
-        
 //        if cell.desk!.wasTouched { //assigned on line above
 //            //Initially I was reloading the collectionView in the helper method that sets the Bool. This caused a visual bug since all of the cells would animate from green to red (and some back to green depending on the Bool value). Instead, I also animated in the helper method, and removed the reloadData call since it's no longer needed.
-//            //can be resolved by moving code to helper method and probably not reloading tableView
+              //MARK: VISUAL BUG: can be resolved by moving code to helper method and not reloading tableView
 //            UIView.animate(withDuration: 0.5) {
 //                cell.backgroundColor = .red
 //            }
