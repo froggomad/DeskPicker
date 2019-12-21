@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GSO-zh-1f3">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--NotA Shopping ListVC-->
+        <!--Pick the desks you like-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="NotAShoppingListVC" customModule="Not_A_Shopping_List" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9Kv-zv-5tL">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7tl-fT-jNI">
                                     <size key="itemSize" width="250" height="250"/>
@@ -65,13 +65,93 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Pick the desks you like" largeTitleDisplayMode="always" id="Wd3-9a-eT9">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="irs-ad-CgN">
+                            <connections>
+                                <segue destination="G2B-ya-gcA" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="0XW-xq-c2N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="9Kv-zv-5tL" id="hIB-LN-qMz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130.40000000000001" y="120.98950524737631"/>
+            <point key="canvasLocation" x="1039.1304347826087" y="120.53571428571428"/>
+        </scene>
+        <!--ConfirmationVC-->
+        <scene sceneID="zBq-nq-uOl">
+            <objects>
+                <viewController id="G2B-ya-gcA" customClass="ConfirmationVC" customModule="Not_A_Shopping_List" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tZe-ec-6bz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="KkK-K7-0W4">
+                                <rect key="frame" x="20" y="64" width="374" height="327"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email this list of desks to me!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzT-jq-0fT">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="67"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JfR-8J-b36">
+                                        <rect key="frame" x="0.0" y="121" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email Address Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mBC-3r-8Di">
+                                        <rect key="frame" x="0.0" y="209" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9VG-iU-Jcd">
+                                        <rect key="frame" x="0.0" y="297" width="374" height="30"/>
+                                        <state key="normal" title="Email me my list!"/>
+                                        <connections>
+                                            <action selector="emailBtnTapped:" destination="G2B-ya-gcA" eventType="touchUpInside" id="5Qz-tN-odQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KkK-K7-0W4" firstAttribute="top" secondItem="1xp-G2-UFV" secondAttribute="top" constant="20" id="Eqm-ca-KMR"/>
+                            <constraint firstItem="KkK-K7-0W4" firstAttribute="leading" secondItem="1xp-G2-UFV" secondAttribute="leading" constant="20" id="IN6-rS-QkU"/>
+                            <constraint firstItem="1xp-G2-UFV" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KkK-K7-0W4" secondAttribute="bottom" constant="20" id="riE-yM-we9"/>
+                            <constraint firstItem="1xp-G2-UFV" firstAttribute="trailing" secondItem="KkK-K7-0W4" secondAttribute="trailing" constant="20" id="x9I-ab-gdO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1xp-G2-UFV"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailLbl" destination="mBC-3r-8Di" id="7P5-9F-ang"/>
+                        <outlet property="nameLbl" destination="JfR-8J-b36" id="sKl-0B-I4N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7BI-HF-8WO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1901" y="121"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="fKT-9s-Q8t">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GSO-zh-1f3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="y88-bV-ljv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="O1V-47-D6T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FmX-ie-xaZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128.98550724637681" y="120.53571428571428"/>
         </scene>
     </scenes>
 </document>

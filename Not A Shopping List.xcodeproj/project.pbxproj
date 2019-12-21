@@ -19,6 +19,7 @@
 		B9A22E9B23ADB38B00A6F659 /* FurnitureDealer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A22E9A23ADB38B00A6F659 /* FurnitureDealer.swift */; };
 		B9A22E9E23ADB70000A6F659 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A22E9D23ADB70000A6F659 /* Alert.swift */; };
 		B9A22EA723AE48FE00A6F659 /* Desk.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A22EA623AE48FE00A6F659 /* Desk.swift */; };
+		B9A22EAB23AEB30C00A6F659 /* ConfirmationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A22EAA23AEB30C00A6F659 /* ConfirmationVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		B9A22E9A23ADB38B00A6F659 /* FurnitureDealer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FurnitureDealer.swift; sourceTree = "<group>"; };
 		B9A22E9D23ADB70000A6F659 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		B9A22EA623AE48FE00A6F659 /* Desk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desk.swift; sourceTree = "<group>"; };
+		B9A22EAA23AEB30C00A6F659 /* ConfirmationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				B9A22E6323ADA9CA00A6F659 /* NotAShoppingListVC.swift */,
+				B9A22EAA23AEB30C00A6F659 /* ConfirmationVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9A22E9E23ADB70000A6F659 /* Alert.swift in Sources */,
+				B9A22EAB23AEB30C00A6F659 /* ConfirmationVC.swift in Sources */,
 				B9A22E6423ADA9CA00A6F659 /* NotAShoppingListVC.swift in Sources */,
 				B9A22E9B23ADB38B00A6F659 /* FurnitureDealer.swift in Sources */,
 				B9A22E6023ADA9CA00A6F659 /* AppDelegate.swift in Sources */,

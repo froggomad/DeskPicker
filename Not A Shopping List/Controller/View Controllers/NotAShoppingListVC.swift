@@ -37,15 +37,18 @@ class NotAShoppingListVC: UIViewController {
     }
     
     func animateCell(cell: DeskCell) {
-        if cell.desk!.wasTouched {
-            UIView.animate(withDuration: 0.5) {
-               cell.backgroundColor = .red
-            }
-        } else {
-            UIView.animate(withDuration: 0.5) {
-               cell.backgroundColor = .green
+        if cell.desk != nil {
+            if cell.desk!.wasTouched {
+                UIView.animate(withDuration: 0.5) {
+                   cell.backgroundColor = .green
+                }
+            } else {
+                UIView.animate(withDuration: 0.5) {
+                   cell.backgroundColor = .red
+                }
             }
         }
+        
     }
 
 }
