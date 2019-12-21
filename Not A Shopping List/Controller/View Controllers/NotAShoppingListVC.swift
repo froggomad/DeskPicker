@@ -9,7 +9,9 @@
 import UIKit
 
 class NotAShoppingListVC: UIViewController {
+    @IBOutlet weak var nextBtn: UIBarButtonItem!
     @IBOutlet weak var collectionView: UICollectionView!
+    
     var deskDealer = FurnitureDealer()
     
     override func viewDidLoad() {
@@ -22,6 +24,9 @@ class NotAShoppingListVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         collectionView.reloadData()
+        if deskDealer.pickedDesks.count == 0 {
+            disableNextBtn()
+        }
     }
     
     //MARK: Navigation
@@ -42,6 +47,12 @@ class NotAShoppingListVC: UIViewController {
         }
         animateCell(cell: cell)
         deskDealer.touchIt(forDesk: deskDealer.desks[indexPath.item])
+        if deskDealer.pickedDesks.count > 0 {
+            enableNextBtn()
+        } else {
+            disableNextBtn()
+        }
+        
     }
     
     func animateCell(cell: DeskCell) {
@@ -56,6 +67,16 @@ class NotAShoppingListVC: UIViewController {
                 }
             }
         }
+    }
+    
+    func disableNextBtn() {
+        nextBtn.isEnabled = false
+        nextBtn.tintColor = .systemGray
+    }
+    
+    func enableNextBtn() {
+        nextBtn.isEnabled = true
+        nextBtn.tintColor = .systemBlue
     }
 
 }

@@ -74,6 +74,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="9Kv-zv-5tL" id="hIB-LN-qMz"/>
+                        <outlet property="nextBtn" destination="irs-ad-CgN" id="s6g-ic-LlR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
