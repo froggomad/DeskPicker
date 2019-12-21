@@ -10,13 +10,6 @@ import UIKit
 
 class DeskCell: UICollectionViewCell {
     @IBOutlet weak var deskLbl: UILabel!
-    #warning("Assign this in VC didSelectItemAt method")
-//    @IBAction func touchedMe(_ sender: UIButton) {
-//        self.delegate?.ohYeahYouTouchedIt(cell: self)
-//    }
-    
-    
-    //weak var delegate: TouchTheDesk?
     
     var desk: Desk? {
         didSet {
