@@ -88,27 +88,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="KkK-K7-0W4">
-                                <rect key="frame" x="20" y="64" width="374" height="327"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="KkK-K7-0W4">
+                                <rect key="frame" x="20" y="171" width="374" height="122"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email this list of desks to me!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzT-jq-0fT">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="67"/>
-                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JfR-8J-b36">
-                                        <rect key="frame" x="0.0" y="121" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Email Address Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mBC-3r-8Di">
-                                        <rect key="frame" x="0.0" y="209" width="374" height="34"/>
+                                        <rect key="frame" x="0.0" y="46" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9VG-iU-Jcd">
-                                        <rect key="frame" x="0.0" y="297" width="374" height="30"/>
+                                        <rect key="frame" x="0.0" y="92" width="374" height="30"/>
                                         <state key="normal" title="Email me my list!"/>
                                         <connections>
                                             <action selector="emailBtnTapped:" destination="G2B-ya-gcA" eventType="touchUpInside" id="5Qz-tN-odQ"/>
@@ -116,12 +110,21 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email this list of desks to me!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mzT-jq-0fT">
+                                <rect key="frame" x="20" y="44" width="374" height="67"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="KkK-K7-0W4" firstAttribute="top" secondItem="1xp-G2-UFV" secondAttribute="top" constant="20" id="Eqm-ca-KMR"/>
                             <constraint firstItem="KkK-K7-0W4" firstAttribute="leading" secondItem="1xp-G2-UFV" secondAttribute="leading" constant="20" id="IN6-rS-QkU"/>
+                            <constraint firstItem="mzT-jq-0fT" firstAttribute="top" secondItem="1xp-G2-UFV" secondAttribute="top" id="Lxu-sb-UcT"/>
+                            <constraint firstItem="1xp-G2-UFV" firstAttribute="trailing" secondItem="mzT-jq-0fT" secondAttribute="trailing" constant="20" id="VmH-oS-OE7"/>
+                            <constraint firstItem="mzT-jq-0fT" firstAttribute="leading" secondItem="1xp-G2-UFV" secondAttribute="leading" constant="20" id="fAT-3n-NFG"/>
                             <constraint firstItem="1xp-G2-UFV" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KkK-K7-0W4" secondAttribute="bottom" constant="20" id="riE-yM-we9"/>
+                            <constraint firstItem="KkK-K7-0W4" firstAttribute="top" secondItem="mzT-jq-0fT" secondAttribute="bottom" constant="60" id="tsE-aP-CF6"/>
                             <constraint firstItem="1xp-G2-UFV" firstAttribute="trailing" secondItem="KkK-K7-0W4" secondAttribute="trailing" constant="20" id="x9I-ab-gdO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1xp-G2-UFV"/>
@@ -133,7 +136,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7BI-HF-8WO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1901" y="121"/>
+            <point key="canvasLocation" x="1900.0000000000002" y="120.53571428571428"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fKT-9s-Q8t">

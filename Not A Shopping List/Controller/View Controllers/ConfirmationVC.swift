@@ -41,6 +41,9 @@ class ConfirmationVC: UIViewController {
            let email = email, email != "" {
             #warning("Alert Here to replace print()")
             print("Sending email list to \(name) at \(email)")
+        } else {
+            #warning("Alert Here to replace print()")
+            print("Please enter your name and email address!")
         }
     }
 
