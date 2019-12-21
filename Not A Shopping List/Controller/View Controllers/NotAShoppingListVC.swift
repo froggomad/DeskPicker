@@ -27,10 +27,10 @@ class NotAShoppingListVC: UIViewController {
     //MARK: Helper Methods
     func youTouchedIt(cell: DeskCell) {
         guard let indexPath = collectionView.indexPath(for: cell) else {return}
-        if cell.desk?.wasTouched != nil {
+        
+        //if var/guard var seems to be making a new instance of cell - it unwraps and the value changes, but if I check it after the guard var/if var - the value hasn't changed in the cell referenced in the function. So I'm doing it the forceful way which is fine since I'm checking for nil
+        if cell.desk != nil {
             cell.desk!.wasTouched = !cell.desk!.wasTouched
-        } else { //if desk is nil, set wasTouched to true since it was just touched
-            cell.desk!.wasTouched = true
         }
         animateCell(cell: cell)
         deskDealer.touchIt(forDesk: deskDealer.desks[indexPath.item])
