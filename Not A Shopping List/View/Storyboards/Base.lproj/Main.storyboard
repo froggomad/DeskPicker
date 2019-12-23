@@ -133,6 +133,7 @@
                     <navigationItem key="navigationItem" id="LgA-Tl-3Pc"/>
                     <connections>
                         <outlet property="emailLbl" destination="mBC-3r-8Di" id="7P5-9F-ang"/>
+                        <outlet property="infoLbl" destination="mzT-jq-0fT" id="dd0-IM-P9Z"/>
                         <outlet property="nameLbl" destination="JfR-8J-b36" id="sKl-0B-I4N"/>
                     </connections>
                 </viewController>

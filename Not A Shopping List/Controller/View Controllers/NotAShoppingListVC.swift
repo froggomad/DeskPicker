@@ -52,7 +52,6 @@ class NotAShoppingListVC: UIViewController {
         } else {
             disableNextBtn()
         }
-        
     }
     
     func animateCell(cell: DeskCell) {

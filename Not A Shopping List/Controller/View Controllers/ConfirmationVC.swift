@@ -9,29 +9,39 @@
 import UIKit
 
 class ConfirmationVC: UIViewController {
+    @IBOutlet weak var infoLbl: UILabel!
     @IBOutlet weak var nameLbl: UITextField!
     @IBOutlet weak var emailLbl: UITextField!
     @IBAction func emailBtnTapped(_ sender: UIButton) {
-        emailList()
+        sendEmailList()
     }
     var name: String?
     var email: String?
     
     //MARK: Class Properties
+    var desks: [Desk]?
+    
     var furnitureDealer: FurnitureDealer? {
         didSet {
             updateViews()
         }
     }
     
-    var desks: [Desk]?
+    var infoText: String {
+        guard let desks = desks else {return "Email this list of desks to me!"}
+        return "Email this list of \(desks.count) desk(s) to me!"
+    }
     
     //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         nameLbl.delegate = self
         emailLbl.delegate = self
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.infoLbl.text = infoText
     }
     
     //MARK: Helper Methods
@@ -39,7 +49,7 @@ class ConfirmationVC: UIViewController {
         //TODO: Populate horizontal collectionview with picked desks
         self.desks = furnitureDealer!.pickedDesks //force unwrapped because this is only called when furnitureDealer is set
     }
-    
+    //print string of selected desks
     func prettyPrinted() -> String {
         guard let desks = desks else {return "No Desks Were Selected"}
         var prettyString = ""
@@ -57,7 +67,7 @@ class ConfirmationVC: UIViewController {
         return prettyString
     }
     
-    func emailList() {
+    func sendEmailList() {
         if let name = name, name != "",
            let email = email, email != "" {
             Alert.show(title: "Sending \(prettyPrinted())", message: "We're sending your list of desks to \(name) at \(email)!", vc: self)
@@ -66,17 +76,6 @@ class ConfirmationVC: UIViewController {
             Alert.show(title: "Oops!", message: "Please enter your name and email address!", vc: self)
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension ConfirmationVC: UITextFieldDelegate {
@@ -87,12 +86,12 @@ extension ConfirmationVC: UITextFieldDelegate {
             nameLbl.resignFirstResponder()
             //performing these checks here for convenience (to switch text field if it needs to be filled in, or automatically submit the email request
             if name != nil, name != "", email != nil, email != "" {
-                emailList()
+                sendEmailList()
             } else {
                 emailLbl.becomeFirstResponder()
             }
         default:
-            emailList()
+            sendEmailList()
             textField.resignFirstResponder()
         }
         return true
