@@ -9,6 +9,7 @@
 import UIKit
 
 class ConfirmationVC: UIViewController {
+    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var infoLbl: UILabel!
     @IBOutlet weak var nameLbl: UITextField!
     @IBOutlet weak var emailLbl: UITextField!
@@ -35,6 +36,8 @@ class ConfirmationVC: UIViewController {
     //MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.delegate = self
+        collectionView.dataSource = self
         nameLbl.delegate = self
         emailLbl.delegate = self
     }
@@ -76,6 +79,24 @@ class ConfirmationVC: UIViewController {
             Alert.show(title: "Oops!", message: "Please enter your name and email address!", vc: self)
         }
     }
+}
+
+extension ConfirmationVC: UICollectionViewDelegate {
+    
+}
+
+extension ConfirmationVC: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        furnitureDealer?.pickedDesks.count ?? 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? DeskCell else {return UICollectionViewCell()}
+        cell.desk = furnitureDealer?.pickedDesks[indexPath.item]
+        return cell
+    }
+    
+    
 }
 
 extension ConfirmationVC: UITextFieldDelegate {

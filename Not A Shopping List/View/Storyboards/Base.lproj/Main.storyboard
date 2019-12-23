@@ -90,7 +90,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="KkK-K7-0W4">
-                                <rect key="frame" x="20" y="215" width="374" height="122"/>
+                                <rect key="frame" x="20" y="333" width="374" height="122"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JfR-8J-b36">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -117,21 +117,66 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fhh-Ks-IgY">
+                                <rect key="frame" x="20" y="163" width="374" height="150"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="GyS-NC-ibc"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZHO-in-XGT">
+                                    <size key="itemSize" width="125" height="125"/>
+                                    <size key="estimatedItemSize" width="125" height="125"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="OPw-9l-9lr" customClass="DeskCell" customModule="Not_A_Shopping_List" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9A0-8G-veO">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oak" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJ5-Bz-9CQ">
+                                                    <rect key="frame" x="34.666666666666664" y="65" width="30.666666666666664" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="SJ5-Bz-9CQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9A0-8G-veO" secondAttribute="leading" constant="8" id="3WP-5D-nch"/>
+                                                <constraint firstItem="SJ5-Bz-9CQ" firstAttribute="centerX" secondItem="9A0-8G-veO" secondAttribute="centerX" id="6Yt-ch-CIY"/>
+                                                <constraint firstItem="SJ5-Bz-9CQ" firstAttribute="centerY" secondItem="9A0-8G-veO" secondAttribute="centerY" id="7iE-2d-Fom"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SJ5-Bz-9CQ" secondAttribute="trailing" constant="8" id="Fug-qt-JGB"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="100" height="150"/>
+                                        <connections>
+                                            <outlet property="deskLbl" destination="SJ5-Bz-9CQ" id="l85-GC-NvK"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="1xp-G2-UFV" firstAttribute="trailing" secondItem="fhh-Ks-IgY" secondAttribute="trailing" constant="20" id="Cf3-Ze-tES"/>
                             <constraint firstItem="KkK-K7-0W4" firstAttribute="leading" secondItem="1xp-G2-UFV" secondAttribute="leading" constant="20" id="IN6-rS-QkU"/>
                             <constraint firstItem="mzT-jq-0fT" firstAttribute="top" secondItem="1xp-G2-UFV" secondAttribute="top" id="Lxu-sb-UcT"/>
                             <constraint firstItem="1xp-G2-UFV" firstAttribute="trailing" secondItem="mzT-jq-0fT" secondAttribute="trailing" constant="20" id="VmH-oS-OE7"/>
+                            <constraint firstItem="JfR-8J-b36" firstAttribute="top" secondItem="fhh-Ks-IgY" secondAttribute="bottom" constant="20" id="d6O-y5-7mj"/>
                             <constraint firstItem="mzT-jq-0fT" firstAttribute="leading" secondItem="1xp-G2-UFV" secondAttribute="leading" constant="20" id="fAT-3n-NFG"/>
-                            <constraint firstItem="1xp-G2-UFV" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KkK-K7-0W4" secondAttribute="bottom" constant="20" id="riE-yM-we9"/>
-                            <constraint firstItem="KkK-K7-0W4" firstAttribute="top" secondItem="mzT-jq-0fT" secondAttribute="bottom" constant="60" id="tsE-aP-CF6"/>
+                            <constraint firstItem="fhh-Ks-IgY" firstAttribute="leading" secondItem="1xp-G2-UFV" secondAttribute="leading" constant="20" id="jJk-3c-FWO"/>
+                            <constraint firstItem="fhh-Ks-IgY" firstAttribute="top" secondItem="mzT-jq-0fT" secondAttribute="bottom" constant="8" id="jKQ-X8-6xV"/>
                             <constraint firstItem="1xp-G2-UFV" firstAttribute="trailing" secondItem="KkK-K7-0W4" secondAttribute="trailing" constant="20" id="x9I-ab-gdO"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1xp-G2-UFV"/>
                     </view>
                     <navigationItem key="navigationItem" id="LgA-Tl-3Pc"/>
                     <connections>
+                        <outlet property="collectionView" destination="fhh-Ks-IgY" id="RkB-b5-z3Q"/>
                         <outlet property="emailLbl" destination="mBC-3r-8Di" id="7P5-9F-ang"/>
                         <outlet property="infoLbl" destination="mzT-jq-0fT" id="dd0-IM-P9Z"/>
                         <outlet property="nameLbl" destination="JfR-8J-b36" id="sKl-0B-I4N"/>
