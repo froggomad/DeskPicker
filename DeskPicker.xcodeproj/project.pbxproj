@@ -40,7 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B9A22E5C23ADA9CA00A6F659 /* Not A Shopping List.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Not A Shopping List.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9A22E5C23ADA9CA00A6F659 /* DeskPicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeskPicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A22E5F23ADA9CA00A6F659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9A22E6123ADA9CA00A6F659 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B9A22E6323ADA9CA00A6F659 /* NotAShoppingListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAShoppingListVC.swift; sourceTree = "<group>"; };
@@ -48,10 +48,10 @@
 		B9A22E6823ADA9CC00A6F659 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9A22E6B23ADA9CC00A6F659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9A22E6D23ADA9CC00A6F659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9A22E7223ADA9CC00A6F659 /* Not A Shopping ListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Not A Shopping ListTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9A22E7223ADA9CC00A6F659 /* DeskPickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeskPickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A22E7623ADA9CD00A6F659 /* Not_A_Shopping_ListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Not_A_Shopping_ListTests.swift; sourceTree = "<group>"; };
 		B9A22E7823ADA9CD00A6F659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B9A22E7D23ADA9CD00A6F659 /* Not A Shopping ListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Not A Shopping ListUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9A22E7D23ADA9CD00A6F659 /* DeskPickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeskPickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9A22E8123ADA9CD00A6F659 /* Not_A_Shopping_ListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Not_A_Shopping_ListUITests.swift; sourceTree = "<group>"; };
 		B9A22E8323ADA9CD00A6F659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9A22E9823ADB05900A6F659 /* DeskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeskCell.swift; sourceTree = "<group>"; };
@@ -100,9 +100,9 @@
 		B9A22E5D23ADA9CA00A6F659 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9A22E5C23ADA9CA00A6F659 /* Not A Shopping List.app */,
-				B9A22E7223ADA9CC00A6F659 /* Not A Shopping ListTests.xctest */,
-				B9A22E7D23ADA9CD00A6F659 /* Not A Shopping ListUITests.xctest */,
+				B9A22E5C23ADA9CA00A6F659 /* DeskPicker.app */,
+				B9A22E7223ADA9CC00A6F659 /* DeskPickerTests.xctest */,
+				B9A22E7D23ADA9CD00A6F659 /* DeskPickerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,9 +210,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B9A22E5B23ADA9CA00A6F659 /* Not A Shopping List */ = {
+		B9A22E5B23ADA9CA00A6F659 /* DeskPicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9A22E8623ADA9CD00A6F659 /* Build configuration list for PBXNativeTarget "Not A Shopping List" */;
+			buildConfigurationList = B9A22E8623ADA9CD00A6F659 /* Build configuration list for PBXNativeTarget "DeskPicker" */;
 			buildPhases = (
 				B9A22E5823ADA9CA00A6F659 /* Sources */,
 				B9A22E5923ADA9CA00A6F659 /* Frameworks */,
@@ -222,14 +222,14 @@
 			);
 			dependencies = (
 			);
-			name = "Not A Shopping List";
+			name = DeskPicker;
 			productName = "Not A Shopping List";
-			productReference = B9A22E5C23ADA9CA00A6F659 /* Not A Shopping List.app */;
+			productReference = B9A22E5C23ADA9CA00A6F659 /* DeskPicker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B9A22E7123ADA9CC00A6F659 /* Not A Shopping ListTests */ = {
+		B9A22E7123ADA9CC00A6F659 /* DeskPickerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9A22E8923ADA9CD00A6F659 /* Build configuration list for PBXNativeTarget "Not A Shopping ListTests" */;
+			buildConfigurationList = B9A22E8923ADA9CD00A6F659 /* Build configuration list for PBXNativeTarget "DeskPickerTests" */;
 			buildPhases = (
 				B9A22E6E23ADA9CC00A6F659 /* Sources */,
 				B9A22E6F23ADA9CC00A6F659 /* Frameworks */,
@@ -240,14 +240,14 @@
 			dependencies = (
 				B9A22E7423ADA9CC00A6F659 /* PBXTargetDependency */,
 			);
-			name = "Not A Shopping ListTests";
+			name = DeskPickerTests;
 			productName = "Not A Shopping ListTests";
-			productReference = B9A22E7223ADA9CC00A6F659 /* Not A Shopping ListTests.xctest */;
+			productReference = B9A22E7223ADA9CC00A6F659 /* DeskPickerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B9A22E7C23ADA9CD00A6F659 /* Not A Shopping ListUITests */ = {
+		B9A22E7C23ADA9CD00A6F659 /* DeskPickerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9A22E8C23ADA9CD00A6F659 /* Build configuration list for PBXNativeTarget "Not A Shopping ListUITests" */;
+			buildConfigurationList = B9A22E8C23ADA9CD00A6F659 /* Build configuration list for PBXNativeTarget "DeskPickerUITests" */;
 			buildPhases = (
 				B9A22E7923ADA9CD00A6F659 /* Sources */,
 				B9A22E7A23ADA9CD00A6F659 /* Frameworks */,
@@ -258,9 +258,9 @@
 			dependencies = (
 				B9A22E7F23ADA9CD00A6F659 /* PBXTargetDependency */,
 			);
-			name = "Not A Shopping ListUITests";
+			name = DeskPickerUITests;
 			productName = "Not A Shopping ListUITests";
-			productReference = B9A22E7D23ADA9CD00A6F659 /* Not A Shopping ListUITests.xctest */;
+			productReference = B9A22E7D23ADA9CD00A6F659 /* DeskPickerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -286,7 +286,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B9A22E5723ADA9CA00A6F659 /* Build configuration list for PBXProject "Not A Shopping List" */;
+			buildConfigurationList = B9A22E5723ADA9CA00A6F659 /* Build configuration list for PBXProject "DeskPicker" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -299,9 +299,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9A22E5B23ADA9CA00A6F659 /* Not A Shopping List */,
-				B9A22E7123ADA9CC00A6F659 /* Not A Shopping ListTests */,
-				B9A22E7C23ADA9CD00A6F659 /* Not A Shopping ListUITests */,
+				B9A22E5B23ADA9CA00A6F659 /* DeskPicker */,
+				B9A22E7123ADA9CC00A6F659 /* DeskPickerTests */,
+				B9A22E7C23ADA9CD00A6F659 /* DeskPickerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -370,12 +370,12 @@
 /* Begin PBXTargetDependency section */
 		B9A22E7423ADA9CC00A6F659 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B9A22E5B23ADA9CA00A6F659 /* Not A Shopping List */;
+			target = B9A22E5B23ADA9CA00A6F659 /* DeskPicker */;
 			targetProxy = B9A22E7323ADA9CC00A6F659 /* PBXContainerItemProxy */;
 		};
 		B9A22E7F23ADA9CD00A6F659 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B9A22E5B23ADA9CA00A6F659 /* Not A Shopping List */;
+			target = B9A22E5B23ADA9CA00A6F659 /* DeskPicker */;
 			targetProxy = B9A22E7E23ADA9CD00A6F659 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -525,8 +525,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hazystudios.Not-A-Shopping-List";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hazystudios.DeskPicker;
+				PRODUCT_NAME = DeskPicker;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -543,8 +543,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hazystudios.Not-A-Shopping-List";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hazystudios.DeskPicker;
+				PRODUCT_NAME = DeskPicker;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -568,7 +568,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Not A Shopping List.app/Not A Shopping List";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeskPicker.app/DeskPicker";
 			};
 			name = Debug;
 		};
@@ -590,7 +590,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Not A Shopping List.app/Not A Shopping List";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DeskPicker.app/DeskPicker";
 			};
 			name = Release;
 		};
@@ -637,7 +637,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9A22E5723ADA9CA00A6F659 /* Build configuration list for PBXProject "Not A Shopping List" */ = {
+		B9A22E5723ADA9CA00A6F659 /* Build configuration list for PBXProject "DeskPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9A22E8423ADA9CD00A6F659 /* Debug */,
@@ -646,7 +646,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9A22E8623ADA9CD00A6F659 /* Build configuration list for PBXNativeTarget "Not A Shopping List" */ = {
+		B9A22E8623ADA9CD00A6F659 /* Build configuration list for PBXNativeTarget "DeskPicker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9A22E8723ADA9CD00A6F659 /* Debug */,
@@ -655,7 +655,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9A22E8923ADA9CD00A6F659 /* Build configuration list for PBXNativeTarget "Not A Shopping ListTests" */ = {
+		B9A22E8923ADA9CD00A6F659 /* Build configuration list for PBXNativeTarget "DeskPickerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9A22E8A23ADA9CD00A6F659 /* Debug */,
@@ -664,7 +664,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9A22E8C23ADA9CD00A6F659 /* Build configuration list for PBXNativeTarget "Not A Shopping ListUITests" */ = {
+		B9A22E8C23ADA9CD00A6F659 /* Build configuration list for PBXNativeTarget "DeskPickerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9A22E8D23ADA9CD00A6F659 /* Debug */,
