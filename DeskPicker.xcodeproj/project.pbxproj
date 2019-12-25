@@ -89,7 +89,7 @@
 		B9A22E5323ADA9CA00A6F659 = {
 			isa = PBXGroup;
 			children = (
-				B9A22E5E23ADA9CA00A6F659 /* Not A Shopping List */,
+				B9A22E5E23ADA9CA00A6F659 /* DeskPicker */,
 				B9A22E8F23ADABC000A6F659 /* Resources */,
 				B9A22E7523ADA9CD00A6F659 /* Not A Shopping ListTests */,
 				B9A22E8023ADA9CD00A6F659 /* Not A Shopping ListUITests */,
@@ -107,14 +107,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B9A22E5E23ADA9CA00A6F659 /* Not A Shopping List */ = {
+		B9A22E5E23ADA9CA00A6F659 /* DeskPicker */ = {
 			isa = PBXGroup;
 			children = (
 				B9A22E9323ADAC7600A6F659 /* Model */,
 				B9A22E9123ADABDF00A6F659 /* View */,
 				B9A22E9223ADABE500A6F659 /* Controller */,
 			);
-			path = "Not A Shopping List";
+			path = DeskPicker;
 			sourceTree = "<group>";
 		};
 		B9A22E7523ADA9CD00A6F659 /* Not A Shopping ListTests */ = {
